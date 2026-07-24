@@ -1,0 +1,19 @@
+{
+  "name": "sentinel-postgres-connector",
+  "config": {
+    "connector.class": "io.debezium.connector.postgresql.PostgresConnector",
+    "tasks.max": "1",
+    "plugin.name": "pgoutput",
+    "database.hostname": "postgres",
+    "database.port": "5432",
+    "database.user": "postgres",
+    "database.password": "postgres",
+    "database.dbname": "sentinel_db",
+    "database.server.name": "sentinel",
+    "topic.prefix": "sentinel",
+    "schema.include.list": "sentinel",
+    "table.include.list": "sentinel.accounts,sentinel.transactions,sentinel.products",
+    "tombstones.on.delete": "false",
+    "decimal.handling.mode": "double"
+  }
+}
